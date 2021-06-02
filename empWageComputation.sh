@@ -1,22 +1,24 @@
-isFulltime=1
-isParttime=2
-PartTimeWage=0
-FullDayWage=0
-WageprHr=20
-check=$(shuf -i 0-2 -n 1)
-if [ $check -eq $isFulltime ]
-then
-   FullDayHr=8
-   FullDayWage=$(($FullDayHr*$WageprHr))
+sfullTime=1
+isPartTime=2
+workingHr=0
+perHrSalary=20
+MonthlyWage=0
+day=0
+while [ $day -le 20 ]
+do
+        check=$(($RANDOM%3))
+        if [ $check -eq $isfullTime ]
+        then
+                workingHr=8
+        elif [ $check -eq $isPartTime ]
+        then
+                workingHr=8
+        else
+                workingHr=0
+        fi
 
-   echo "Full Day Wage =" $FullDayWage
-
-elif [ $check -eq $isParttime ]
-then
-   PartTimeHr=8
-   PartTimeWage=$(($WageprHr*$PartTimeHr))
-   echo "Part Time Wage =" $PartTimeWage
-else
-   echo "Employee is Absent"
-fi
+        MonthlyWage=$(($MonthlyWage+($workingHr*$perHrSalary)))
+        ((day++))
+done
+echo " Employee Monthly Wage =" $MonthlyWage
 
