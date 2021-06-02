@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 sfullTime=1
+=======
+isfullTime=1
+>>>>>>> Employee-Monthly-Wager
 isPartTime=2
 workingHr=0
 perHrSalary=20
