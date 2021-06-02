@@ -26,4 +26,4 @@ do
 
 done
 echo "Total salay ="$totalSalary
-echo "Emlpoyee working days = $numWorkingDays and hours = $hrcheck"
+echo "Emlpoyee working days = $numWorkingDays  and hours = $hrcheck"
