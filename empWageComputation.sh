@@ -1,3 +1,4 @@
+
 isPartTime=1
 isfullTime=2
 totalSalary=0
